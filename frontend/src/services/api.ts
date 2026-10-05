@@ -4,6 +4,13 @@
  * In production, set VITE_API_BASE_URL env variable.
  */
 
+
+// type ImportMetaEnv = {
+//   VITE_API_BASE_URL?: string
+// }
+
+// const BASE_URL = ((import.meta as ImportMeta & { env: ImportMetaEnv }).env.VITE_API_BASE_URL || '/api')
+
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api'
 
 export interface User {
