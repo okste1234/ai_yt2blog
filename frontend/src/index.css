@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-800 font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blogger-orange text-white text-sm font-medium rounded-full hover:bg-blogger-orange-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blogger-orange focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 border border-blogger-orange text-blogger-orange text-sm font-medium rounded-full hover:bg-blogger-orange-bg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blogger-orange focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-gray-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blogger-orange focus:border-transparent transition-all duration-200 bg-white placeholder-gray-400;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .blog-content {
+    @apply max-w-none text-gray-700 leading-relaxed;
+  }
+}
+
+/* Loading spinner */
+@keyframes spin-ring {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #FBE9E7;
+  border-top-color: #FF5722;
+  border-radius: 50%;
+  animation: spin-ring 0.8s linear infinite;
+}
+
+/* Prose-like blog content rendering */
+.blog-content p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.blog-content h1, .blog-content h2, .blog-content h3 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
